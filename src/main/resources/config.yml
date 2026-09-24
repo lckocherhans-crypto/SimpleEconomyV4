@@ -1,0 +1,31 @@
+# Balance new players start with
+starting-balance: 1000
+
+auction:
+  duration-hours: 48
+  max-listings: 10      # auction lots per player
+  min-price: 1
+  tax-percent: 0        # percent taken from the seller on each sale
+
+orders:
+  max-orders: 5          # active orders per player
+  max-amount: 2304       # max items in one order
+  # Items that can't be requested in a buy order (admin-only / not normally obtainable)
+  blocked-items:
+    - BARRIER
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - COMMAND_BLOCK_MINECART
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+    - JIGSAW
+    - LIGHT
+    - DEBUG_STICK
+    - KNOWLEDGE_BOOK
+    - SPAWNER
+
+sell:
+  # Global multiplier applied on top of every item's base price in prices.yml.
+  # Tune this to adjust the whole economy without editing every item.
+  multiplier: 1.0
